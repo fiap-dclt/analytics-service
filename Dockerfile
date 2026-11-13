@@ -31,6 +31,11 @@ RUN pip check
 # Valida a importação das principais bibliotecas da aplicação.
 RUN python -c "import flask, gunicorn, boto3, dotenv, setuptools; print('Dependencies OK')"
 
+# Remove somente o pip do ambiente virtual após a instalação.
+# Elimina as bibliotecas incorporadas ao pip que geraram
+# apontamentos no Trivy, mantendo o setuptools disponível.
+RUN python -m pip uninstall -y pip
+
 # ==========================================
 # Stage 2: Imagem final Distroless
 # ==========================================

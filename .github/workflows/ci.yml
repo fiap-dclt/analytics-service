@@ -11,6 +11,7 @@ on:
       - main
     paths-ignore:
       - ".github/**"
+  workflow_dispatch:
 
 # Configurações existentes de publicação no ECR e atualização do GitOps.
 env:

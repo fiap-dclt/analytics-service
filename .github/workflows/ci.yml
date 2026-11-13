@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - ".github/**"
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - ".github/**"
 
 # Configurações existentes de publicação no ECR e atualização do GitOps.
 env:

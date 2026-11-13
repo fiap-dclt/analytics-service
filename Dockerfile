@@ -24,7 +24,7 @@ RUN pip uninstall -y pip wheel \
 # ==========================================
 # Stage 2: Imagem Final Distroless
 # ==========================================
-FROM gcr.io/distroless/python3-debian12
+FROM gcr.io/distroless/python3-debian12:nonroot
 
 WORKDIR /app
 
